@@ -299,3 +299,24 @@ yarn start
         <img src="https://deploy.cloud.run/button.svg" alt="Run on Google Cloud" width="150px"/>
     </a>
 </p>
+
+## FAQ
+1. err_package_path_not_exported ./lib/tokenize
+
+	remove yarn.lock file
+
+2. err_ossl_evp_unsupported
+```shell
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+3. delete build folder
+
+	build folder should not be included which will be deleted later
+
+4. react build set homepage
+
+	add this line to package.json
+```json
+"homepage": "."
+```
